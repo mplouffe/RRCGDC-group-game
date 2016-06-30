@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: b9ee088f55e2e6145b406b2249fd266c
-timeCreated: 1465433502
+timeCreated: 1465715964
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - garbageTruck: {fileID: 120340, guid: 0f2f4f03121d1c14a99097092dbcc1b3, type: 2}
+  - turret: {fileID: 191880, guid: 91c28970f9e3e9c4d8561745af1fe4ad, type: 2}
+  - copCar: {fileID: 123536, guid: ae3167994eaa9644cb000379d0ef3aca, type: 2}
+  - ambulance: {fileID: 157052, guid: 812e310b97522bf4ab223ba60fbb3b33, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

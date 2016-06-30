@@ -11,13 +11,13 @@ public class PointAtPlayer : MonoBehaviour {
 
     public Transform target;            // referece to the target to be pointing at
 
-    void Awake()
+    void Start()
     {
         // if the player is alive
         if (Manager.Instance.playerIsAlive)
         {
             // get a reference to the player's transform and set it as the target
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+            target = Manager.Instance.player;
         }
     }
 

@@ -9,9 +9,9 @@ using System.Collections;
 /// </summary>
 public class EnemyHealth : MonoBehaviour {
 
-    public GameObject explosion;        // the explosion that will be created when the enemy is destroyed
     public int startingHealth = 3;      // the starting health of the enemy (just threw in a default value of 5)
     public int currentHealth;           // the current of the enemy
+    public Death death;
 
     bool isDead;                        // if the enemy is alive or not
 
@@ -39,22 +39,9 @@ public class EnemyHealth : MonoBehaviour {
 
         if(currentHealth <= 0)
         {
+            isDead = true;
             // if the current health is 0 or less, call the death function
-            Death();
+            death.Die();
         }
-    }
-
-    /// <summary>
-    /// Death
-    /// function to handle the killing of the enemy
-    /// </summary>
-    void Death()
-    {
-        // set dead to true
-        isDead = true;
-        // create the explosion     
-        Instantiate(explosion, transform.position, transform.rotation);
-        // destroy this object
-        Destroy(gameObject);
     }
 }
