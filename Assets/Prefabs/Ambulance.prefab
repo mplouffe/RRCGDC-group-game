@@ -41,7 +41,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157052}
   serializedVersion: 2
-  m_Mass: 500
+  m_Mass: 30000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -59,7 +59,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.85, y: 2.02, z: 0.2}
+  m_Size: {x: 0.85, y: 2.02, z: 2}
   m_Center: {x: -0.03, y: -0.09, z: 0}
 --- !u!95 &9579426
 Animator:
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100010, guid: 645413a00f7bd0242bbd6d0e5eb6f439, type: 2}
+  spawnLane: -100
   item: {fileID: 199300, guid: 0a9fc6f198de79240b98901c1135024d, type: 2}
 --- !u!114 &11439400
 MonoBehaviour:
@@ -102,9 +103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235f07da9bc6be74aa6f40cfb81ea928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  topSpeed: 0.8
-  topSlow: 0.2
+  moveSpeed: 0.3
+  topSpeed: 0.6
+  topSlow: 0.09
   speedFactor: 0.01
 --- !u!114 &11457388
 MonoBehaviour:

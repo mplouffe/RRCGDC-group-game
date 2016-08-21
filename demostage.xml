@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<level>
+  <enemy>
+    <type>garbage</type>
+    <wait>5</wait>
+  </enemy>
+  <enemy>
+    <type>cop</type>
+    <wait>2</wait>
+  </enemy>
+  <enemy>
+    <type>ambulance</type>
+    <wait>5</wait>
+  </enemy>
+  <enemy>
+    <type>rotate</type>
+    <amount>0.3</amount>
+    <increment>0.01</increment>
+    <wait>2</wait>
+  </enemy>
+</level>

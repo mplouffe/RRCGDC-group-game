@@ -69,7 +69,7 @@ public class PlayerHealth : MonoBehaviour {
         if (currentHealth <= 0 && Manager.Instance.playerIsAlive)
         {
             // if damage 0 or less and the player is alive, call death
-            Death();
+            Die();
         }
     }
 
@@ -96,7 +96,7 @@ public class PlayerHealth : MonoBehaviour {
     /// Death
     /// Handles the killing of the player
     /// </summary>
-    void Death()
+    public void Die()
     {
         // the player is dead
         Manager.Instance.playerIsAlive = false;

@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50dc71f55692f5f43b51e9540d0d673a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 80
   shotSpark: {fileID: 177190, guid: 1ef9d63d372dcce4b93640c3a6539362, type: 2}
   damage: 1
 --- !u!136 &13684552

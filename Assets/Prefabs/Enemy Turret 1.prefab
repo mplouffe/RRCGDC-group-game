@@ -41,8 +41,8 @@ GameObject:
   - 4: {fileID: 430824}
   - 54: {fileID: 5426754}
   - 65: {fileID: 6552434}
-  - 114: {fileID: 11415068}
   - 114: {fileID: 11477766}
+  - 114: {fileID: 11439384}
   m_Layer: 0
   m_Name: Enemy Turret 1
   m_TagString: Enemy
@@ -91,7 +91,7 @@ Transform:
   m_GameObject: {fileID: 165246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 430824}
   m_RootOrder: 1
@@ -103,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 195698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.01}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 7, y: 8, z: 1}
   m_Children:
   - {fileID: 428456}
   - {fileID: 466952}
@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.3, y: 22.4, z: 0}
+  m_LocalPosition: {x: -24.624271, y: -2.5953038, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 406462}
@@ -174,7 +174,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.13, y: 1.09, z: 1.12}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11415068
+--- !u!114 &11439384
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -182,13 +182,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 191880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 235f07da9bc6be74aa6f40cfb81ea928, type: 3}
+  m_Script: {fileID: 11500000, guid: 83504fb927828c14cae34229b2ddd1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  topSpeed: 1
-  topSlow: 0.2
-  speedFactor: 0.01
 --- !u!114 &11477410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,7 +201,7 @@ MonoBehaviour:
   shotSpawnRight: {fileID: 466952}
   fireRate: 0.5
   nextFire: 0
-  openFireWait: 1
+  openFireWait: 0.5
 --- !u!114 &11477766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -217,9 +213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b7227ccef908846a59540d290ebd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 100010, guid: 645413a00f7bd0242bbd6d0e5eb6f439, type: 2}
   startingHealth: 1
   currentHealth: 0
+  death: {fileID: 0}
 --- !u!114 &11482880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,7 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  damping: 2
 --- !u!212 &21277508
 SpriteRenderer:
   m_ObjectHideFlags: 1
