@@ -1,28 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Object that spawns building objects.
+/// </summary>
 public class BuildingSpawner : MonoBehaviour
 {
-    public GameObject building;
+    public GameObject building;                     // the prefab to be generated
 
-    public enum SpawnSide { Left, Right, Both };
+    public enum SpawnSide { Left, Right, Both };    // and enum for which side objects should be spawned on
 
-    public Vector3 enemySpawnValues;     // a vector 3 used to set the area in which you want one of the game objects to spawn
+    public Vector3 enemySpawnValues;                // a vector 3 used to set the area in which you want one of the game objects to spawn
 
-    public SpawnSide sideToSpawnBuildings = SpawnSide.Both;
-    public bool droppingBuildings = false;
-    public float frequency;
+    public SpawnSide sideToSpawnBuildings;          // holds the side the building spawner is spawning buildings on
+    public bool droppingBuildings = false;          // boolean used to in the Coroutine to spawn buildings
+    public float frequency;                         // holds the wait period between coroutine calls
 
     // Use this for initialization
     void Start()
     {
-        setBuildings('B', 3);
+        // use this if you want to initialize the building spawner with a value for testing purpose
+        // setBuildings('B', 3);
     }
 
+    /// <summary>
+    /// Spawns a building object based upon the currently set variables
+    /// </summary>
     private void createBuilding()
     {
-        SpawnSide currentSpawn;
+        // setting up variables
+        Vector3 spawnPosition;
+        Quaternion spawnRotation;
+        SpawnSide currentSpawn;     // the side on which we're gonna spawn a building
 
+        // if the sideToSpawnBuildings == both, pick a random side to spawn a building on, else set the curentSpawn to the sideToSpawnBuildings
         if (sideToSpawnBuildings == SpawnSide.Both)
         {
             currentSpawn = Random.Range(-1, 1) < 0 ? SpawnSide.Left : SpawnSide.Right;
@@ -32,9 +43,7 @@ public class BuildingSpawner : MonoBehaviour
             currentSpawn = sideToSpawnBuildings;
         }
 
-        Vector3 spawnPosition;
-        Quaternion spawnRotation;
-
+        // set the variables based on which side currentSpawn is set to
         if (currentSpawn == SpawnSide.Left)
         {
             spawnPosition = new Vector3(
@@ -55,10 +64,14 @@ public class BuildingSpawner : MonoBehaviour
             spawnRotation = Quaternion.identity;
         }
 
+        // instantiate the object
         Instantiate(building, spawnPosition, spawnRotation);
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// The Coroutine that calls itself repeatedly, pausing the frequency duration before calling
+    /// </summary>
+    /// <returns></returns>
     IEnumerator SpawnBuildings()
     {
         while (droppingBuildings)
@@ -69,6 +82,11 @@ public class BuildingSpawner : MonoBehaviour
         yield break;
     }
 
+    /// <summary>
+    /// Call this to start spawning buildings. This sets up the buidling spawning values and starts the Coroutine
+    /// </summary>
+    /// <param name="side">The side to spawn buildings on</param>
+    /// <param name="frequency">How long to wait before spawning the next building.</param>
     public void setBuildings(char side, float frequency)
     {
         switch (side)
@@ -92,6 +110,9 @@ public class BuildingSpawner : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Call this to stop spawning buildings.
+    /// </summary>
     public void stopBuildings()
     {
         droppingBuildings = false;

@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Used by various objects to simulate a consistent rate of speed relative to the player.
+/// </summary>
 public class WorldSpeed : MonoBehaviour {
     // public variables
     public float scrollSpeed;       // this is base scroll speed (how fast you want the screen to scroll by default)
@@ -27,10 +30,6 @@ public class WorldSpeed : MonoBehaviour {
 
         // set the instance to this object
         Instance = this;
-
-        // this is uncessary right now because we don't have multiple scenes, but this will allow the object
-        // to persist through scene changes
-        DontDestroyOnLoad(gameObject);
     }
 
     void FixedUpdate () {

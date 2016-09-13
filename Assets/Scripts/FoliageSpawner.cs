@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Object that spawns Foliage. For more detailed comments, please see the BuildingSpawner script. This script works in the exact same way.
+/// </summary>
 public class FoliageSpawner : MonoBehaviour {
     public GameObject foliage;
 
@@ -14,7 +17,7 @@ public class FoliageSpawner : MonoBehaviour {
                               
     // Use this for initialization
     void Start () {
-        setFoliage('B', 0.5f);
+        // setFoliage('B', 0.5f);
 	}
 
     private void createTree()

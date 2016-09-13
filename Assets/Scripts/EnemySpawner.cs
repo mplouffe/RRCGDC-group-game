@@ -21,26 +21,10 @@ public class EnemySpawner : MonoBehaviour
     public Vector3 enemySpawnValues;     // a vector 3 used to set the area in which you want one of the game objects to spawn
     public List<float> spawnLanes = new List<float>(); // a list of floats that represent the spawn points of the lanes
                                                        // as enemies spawn and die they will pull spawn lanes from the array and then pop them back on when they are done with them
-    public static EnemySpawner Instance { get; private set; }
 
-    void Awake()
-    {
-        // check to make sure the Instance is null, or not set to anything else
-        if (Instance != null && Instance != this)
-        {
-            // if the instance isn't null, or there is something other than this in there, destroy it
-            Destroy(gameObject);
-        }
-
-        // set the instance to this object
-        Instance = this;
-
-        // this is uncessary right now because we don't have multiple scenes, but this will allow the object
-        // to persist through scene changes
-        DontDestroyOnLoad(gameObject);
-    }
-
-
+    /// <summary>
+    /// Sets up the array of spawn lanes. The values were just added manually are spaced out approximately the width of 1 garbage truck sprite
+    /// </summary>
     void Start()
     {
         spawnLanes.Add(-12.5F);
@@ -155,6 +139,9 @@ public class EnemySpawner : MonoBehaviour
             }
      }
 
+    /// <summary>
+    /// Spawns a pedestrian, picks a random side to spawn them on.
+    /// </summary>
     public void SpawnPedestrian()
     {
         float sideToSpawnPedestrian = Random.Range(-1, 1);
@@ -178,6 +165,9 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(pedestrian, spawnPosition, spawnRotation);
     }
 
+    /// <summary>
+    /// Spawns a 'car' object which is an object with multiple sprites
+    /// </summary>
     public void SpawnCar()
     {
         if (spawnLanes.Count > 0)
@@ -195,7 +185,7 @@ public class EnemySpawner : MonoBehaviour
 
             GameObject newCar = (GameObject)Instantiate(multiSpriteEnemy, spawnPosition, spawnRotation);                        // spawn the truck
             newCar.GetComponent<Death>().spawnLane = spawnPositionX;
-            newCar.GetComponent<MultiSpriteManager>().setSprite((int)Random.Range(0, 15));
+            newCar.GetComponent<MultiSpriteManager>().setSprite((int)Random.Range(0, 15));  // picks a random value to set the sprite to
         }
     }
 }

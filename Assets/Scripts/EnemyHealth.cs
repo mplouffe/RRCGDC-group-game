@@ -37,11 +37,14 @@ public class EnemyHealth : MonoBehaviour {
         // subtract the damage from the current health
         currentHealth -= amount;
 
-        if(currentHealth <= 0)
+        if(currentHealth <= 0 && !isDead)
         {
             isDead = true;
             // if the current health is 0 or less, call the death function
-            death.Die();
+            if (death != null)
+            {
+                death.Die();
+            }
         }
     }
 }

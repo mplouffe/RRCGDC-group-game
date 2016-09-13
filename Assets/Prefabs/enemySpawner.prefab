@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &151430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483354}
+  - 114: {fileID: 11467894}
+  - 114: {fileID: 11481414}
+  - 114: {fileID: 11416744}
+  m_Layer: 0
+  m_Name: enemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483354
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11416744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74541df13f77c104fb40daad3aab53d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  building: {fileID: 154482, guid: 5e8159baf62ce774dafa30d4aa77e74d, type: 2}
+  enemySpawnValues: {x: 0, y: 50, z: 0}
+  sideToSpawnBuildings: 2
+  droppingBuildings: 0
+  frequency: 0
+--- !u!114 &11467894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc846a0d7cb3e349a4562120d8458ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  garbageTruck: {fileID: 120340, guid: 0f2f4f03121d1c14a99097092dbcc1b3, type: 2}
+  turret: {fileID: 191880, guid: 91c28970f9e3e9c4d8561745af1fe4ad, type: 2}
+  copCar: {fileID: 123536, guid: ae3167994eaa9644cb000379d0ef3aca, type: 2}
+  ambulance: {fileID: 157052, guid: 812e310b97522bf4ab223ba60fbb3b33, type: 2}
+  pedestrian: {fileID: 136464, guid: 59b4d3ce56012094089425a172bc2d04, type: 2}
+  multiSpriteEnemy: {fileID: 135332, guid: 082447bd6d616064788c63c53d373b97, type: 2}
+  enemySpawnValues: {x: 0, y: 50, z: 0}
+  spawnLanes: []
+--- !u!114 &11481414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c083249efa5a8448396dc1b98302ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foliage: {fileID: 173076, guid: 0cbcd33a61336d443b4c56cf2ba31904, type: 2}
+  enemySpawnValues: {x: 0, y: 50, z: 0}
+  sideToSpawnFoliage: 2
+  droppingTrees: 0
+  frequency: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 151430}
+  m_IsPrefabParent: 1

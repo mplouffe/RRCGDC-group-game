@@ -9,18 +9,6 @@ using System.Collections;
 /// </summary>
 public class PointAtPlayer : MonoBehaviour {
 
-    public Transform target;            // referece to the target to be pointing at
-
-    void Start()
-    {
-        // if the player is alive
-        if (Manager.Instance.playerIsAlive)
-        {
-            // get a reference to the player's transform and set it as the target
-            target = Manager.Instance.player;
-        }
-    }
-
     void Update()
     {
         // if the player is alive
@@ -29,7 +17,7 @@ public class PointAtPlayer : MonoBehaviour {
             // point at the player
             // I simply pulled this script from online, so I wouldn't be able to explain the math of it yet.
             // important part is that it will only rotate the cannon along the z axis
-            Vector3 diff = target.position - transform.position;
+            Vector3 diff = Manager.Instance.player.position - transform.position;
             diff.Normalize();
 
             float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;

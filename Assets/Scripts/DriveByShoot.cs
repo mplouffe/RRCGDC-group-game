@@ -15,17 +15,6 @@ public class DriveByShoot : MonoBehaviour {
     public float fireRate = 0.1F;           // the rate at which the turret will fire
     public float nextFire = 0.0F;           // used to calculate when the turret should fire next
 
-
-    void Start()
-    {
-        // if the player is alive
-        if (Manager.Instance.playerIsAlive)
-        {
-            // get a reference to the player's transform and set it as the target
-            target = Manager.Instance.player;
-        }
-    }
-
     // each Update, check if the turret should be firing
     void Update()
     {
@@ -68,8 +57,8 @@ public class DriveByShoot : MonoBehaviour {
         float x3 = xOfRoadEdge;
         float y3 = this.transform.position.y - oppEdge;
 
-        float a = ((y2 - y3) * (target.position.x - x3) + (x3 - x2) * (target.position.y - y3)) / ((y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3));
-        float b = ((y3 - y1) * (target.position.x - x3) + (x1 - x3) * (target.position.y - y3)) / ((y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3));
+        float a = ((y2 - y3) * (Manager.Instance.player.position.x - x3) + (x3 - x2) * (Manager.Instance.player.position.y - y3)) / ((y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3));
+        float b = ((y3 - y1) * (Manager.Instance.player.position.x - x3) + (x1 - x3) * (Manager.Instance.player.position.y - y3)) / ((y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3));
         float c = 1 - a - b;
 
         return (0 <= a && a <= 1 && 0 <= b && b <= 1 && 0 <= c && c <= 1);

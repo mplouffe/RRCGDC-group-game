@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/// <summary>
+/// This was used for trouble shooting purposes. Not currently used in the project.
+/// </summary>
 public class Troubleshooting : MonoBehaviour {
 
 	// Use this for initialization

@@ -9,6 +9,9 @@ public class Boundary
     public float xMin, xMax, yMin, yMax;
 }
 
+/// <summary>
+/// The basic player movement script.
+/// </summary>
 public class PlayerMovement : MonoBehaviour {
 
     public float speed;             // the base speed multipler used by the car
@@ -18,18 +21,18 @@ public class PlayerMovement : MonoBehaviour {
     public float accelerate;        // a modifier for the forward speed
     public float breaks;            // a modifier for the backwards speed
 
-    void FixedUpdate()
-    {
-        // get the direcitonal input from the player (returns -1, 0, 1)
-        float movementX = Input.GetAxis("Horizontal");
-        float movementY = Input.GetAxis("Vertical");
+     void FixedUpdate()
+    { 
+    // get the direcitonal input from the player (returns -1, 0, 1)
+    float movementX = Input.GetAxis("Horizontal");
+    float movementY = Input.GetAxis("Vertical");
 
         // depending on the up or down direction the player has input
         // either add accelerate or subtract the brakes from the movmentY
         if(movementY > 0)
         {
             movementY += accelerate;
-        } else if(movementY < 0)
+        } else if(movementY< 0)
         {
             movementY -= breaks;
         }
@@ -39,7 +42,7 @@ public class PlayerMovement : MonoBehaviour {
         if(movementX > 0)
         {
             movementX += drift;
-        } else if (movementX < 0)
+        } else if (movementX< 0)
         {
             movementX -= drift;
         }
@@ -55,7 +58,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             Manager.Instance.topped = true;
         }
-        else if(GetComponent<Rigidbody>().position.y < boundary.yMin)
+        else if(GetComponent<Rigidbody>().position.y<boundary.yMin)
         {
             Manager.Instance.bottomed = true;
         }

@@ -2,6 +2,7 @@
 using System.Collections;
 
 /// <summary>
+/// LEGACY CODE:
 /// On a collsion between two objects, destroy both objects.
 /// Before enemy health was built in, this was used to have the enemys just destroyed
 /// when hit by bullets that had this script attached.

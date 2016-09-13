@@ -8,6 +8,10 @@ TagManager:
   - Boundary
   - Enemy
   - Item
+  - healthUI
+  - damageImage
+  - Fire
+  - playerLives
   layers:
   - Default
   - TransparentFX

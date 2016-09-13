@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 /// <summary>
+/// A suggested Car base class built by Andrew. This currently isn't implemented into the game, but provides an interesting basis
+/// for the things we could do with the car objects. - Matheu
+/// 
+/// 
 /// I played too much CarWars as a kid.  This is just off the top of my head!
 /// My idea is that the cars can be customized, right now, I have more customization than I expect to need.
 /// 

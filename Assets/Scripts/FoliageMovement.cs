@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Controls the movement for the tree objects. Uses movement values derrived from the worldSpeed Instance
+/// </summary>
 public class FoliageMovement : MonoBehaviour {
 	
 	// Update is called once per frame

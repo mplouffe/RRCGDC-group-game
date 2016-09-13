@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// The movement script for the suicidal pedestrians. They home in on the player.
+/// </summary>
 public class PedestrianMotion : MonoBehaviour {
 
     // Update is called once per frame
@@ -8,13 +11,14 @@ public class PedestrianMotion : MonoBehaviour {
     {
         float horizontalMoveFactor;
 
+        // check which side to approach towards player.
         if(Manager.Instance.player.position.x - this.transform.position.x < -1)
         {
-            horizontalMoveFactor = -0.5F;
+            horizontalMoveFactor = -0.55F;
         }
         else if(Manager.Instance.player.position.x - this.transform.position.x > 1)
         {
-            horizontalMoveFactor = 0.5F;
+            horizontalMoveFactor = 0.55F;
         }else
         {
             horizontalMoveFactor = 0;

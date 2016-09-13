@@ -9,12 +9,16 @@ public class DestroyByBoundary : MonoBehaviour
 {
     void OnTriggerExit(Collider other)
     {
-        // if the object has left the boundary box colider, destroy it
+        // if the object has left the boundary box colider:
+        // if it is another object with a death element, call it's Die function
+        // if it doesn't have a death object, just destroy it
         if (other.gameObject.GetComponent<Death>())
         {
-            EnemySpawner.Instance.spawnLanes.Add(other.gameObject.GetComponent<Death>().spawnLane);
+            other.gameObject.GetComponent<Death>().Die();
         }
-
-        Destroy(other.gameObject);
+        else
+        {
+            Destroy(other.gameObject);
+        }
     }    
 }
