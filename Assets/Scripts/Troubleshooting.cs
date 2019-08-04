@@ -20,7 +20,7 @@ public class Troubleshooting : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButton("Fire1"));
+        if (Input.GetButton("Fire1"))
         {
             Debug.Log("X :" + this.transform.position.x);
             Debug.Log("Y :" + this.transform.position.y);

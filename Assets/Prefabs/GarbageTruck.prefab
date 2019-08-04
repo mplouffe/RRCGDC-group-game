@@ -10,10 +10,10 @@ GameObject:
   - 4: {fileID: 488338}
   - 54: {fileID: 5459798}
   - 65: {fileID: 6569578}
-  - 114: {fileID: 11497928}
   - 114: {fileID: 11496894}
   - 114: {fileID: 11401336}
-  m_Layer: 0
+  - 114: {fileID: 11490834}
+  m_Layer: 9
   m_Name: GarbageTruck
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 422126}
   - 212: {fileID: 21294590}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: trashmaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120340}
   serializedVersion: 2
-  m_Mass: 50000
+  m_Mass: 30
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -101,7 +101,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100010, guid: 645413a00f7bd0242bbd6d0e5eb6f439, type: 2}
   spawnLane: -100
-  dungeonMaster: {fileID: 0}
+--- !u!114 &11490834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888f77b98fab7a04693fc9f50e524412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: -200
+  startingSpeed: -5
+  enemyRigidbody: {fileID: 5459798}
 --- !u!114 &11496894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,21 +129,6 @@ MonoBehaviour:
   startingHealth: 3
   currentHealth: 0
   death: {fileID: 11401336}
---- !u!114 &11497928
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 235f07da9bc6be74aa6f40cfb81ea928, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.2
-  topSpeed: 0.5
-  topSlow: 0.05
-  speedFactor: 0.01
 --- !u!212 &21294590
 SpriteRenderer:
   m_ObjectHideFlags: 1

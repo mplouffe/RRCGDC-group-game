@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 428456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leftShotSpawn
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 405884}
   - 212: {fileID: 21290916}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: enemyTurretBase
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - 65: {fileID: 6552434}
   - 114: {fileID: 11477766}
   - 114: {fileID: 11439384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy Turret 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 212: {fileID: 21277508}
   - 114: {fileID: 11482880}
   - 114: {fileID: 11477410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: enemyTurretGun
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 466952}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rightShowSpawn
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38106f5d52e222341a5b73cbb39a27b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!212 &21277508
 SpriteRenderer:
   m_ObjectHideFlags: 1

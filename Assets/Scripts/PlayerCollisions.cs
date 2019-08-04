@@ -27,7 +27,7 @@ public class PlayerCollisions : MonoBehaviour {
             {
                 if (transform.position.y < collision.transform.position.y)
                 {
-                    collision.gameObject.GetComponent<Death>().Die();
+                    collision.gameObject.GetComponent<Death>().Die(true);
                 }
             }
         }

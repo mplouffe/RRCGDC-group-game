@@ -9,9 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 490840}
   - 54: {fileID: 5477964}
-  - 114: {fileID: 11432668}
-  - 114: {fileID: 11438366}
-  m_Layer: 0
+  - 65: {fileID: 6590892}
+  - 114: {fileID: 11454548}
+  - 114: {fileID: 11479116}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -30,7 +31,7 @@ GameObject:
   - 114: {fileID: 11418472}
   - 114: {fileID: 11428432}
   - 65: {fileID: 6541220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blackCar
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -47,7 +48,7 @@ GameObject:
   - 4: {fileID: 498794}
   - 212: {fileID: 21225470}
   - 114: {fileID: 11416818}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: turret
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -62,7 +63,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 433978}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shot Spawn
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -141,11 +142,23 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131448}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 971b460dda47a0949a3a7934aa43cac5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.8, y: 6.1153846, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6590892
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 2.8, y: 6.1153846, z: 0.6}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11416818
 MonoBehaviour:
@@ -187,9 +200,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 10
   currentHealth: 0
-  explosion: {fileID: 100010, guid: 645413a00f7bd0242bbd6d0e5eb6f439, type: 2}
+  explosion: {fileID: 100010, guid: aa8a9d0293f22f04fa5c9c9354af22a7, type: 2}
   player: {fileID: 110874}
---- !u!114 &11432668
+--- !u!114 &11454548
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -197,7 +210,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 110874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc7a863731ddf0845ab57f985fcee251, type: 3}
+  m_Script: {fileID: 11500000, guid: 099db7e5bda02ad439e922d937e33e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
@@ -206,10 +219,13 @@ MonoBehaviour:
     xMax: 14
     yMin: -20
     yMax: 20
-  drift: 1
-  accelerate: 2
-  breaks: 2
---- !u!114 &11438366
+  drift: 350
+  accelerate: 700
+  breaks: 700
+  decelerationFactor: 3
+  playerRigidbody: {fileID: 5477964}
+  velocityCutOff: 3
+--- !u!114 &11479116
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

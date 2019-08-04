@@ -14,7 +14,8 @@ GameObject:
   - 114: {fileID: 11450004}
   - 114: {fileID: 11446372}
   - 114: {fileID: 11463952}
-  m_Layer: 0
+  - 82: {fileID: 8279280}
+  m_Layer: 9
   m_Name: MolotovPedestrian
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -31,7 +32,7 @@ GameObject:
   - 4: {fileID: 420072}
   - 198: {fileID: 19893922}
   - 199: {fileID: 19991852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +49,7 @@ GameObject:
   - 4: {fileID: 470374}
   - 212: {fileID: 21249364}
   - 95: {fileID: 9518548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pedestrian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +71,7 @@ GameObject:
   - 199: {fileID: 19921906}
   - 198: {fileID: 19833988}
   - 114: {fileID: 11407722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -87,7 +88,7 @@ GameObject:
   - 4: {fileID: 414054}
   - 198: {fileID: 19810934}
   - 199: {fileID: 19987826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,6 +203,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.38, y: 1.53, z: 1}
   m_Center: {x: -0.24, y: -0.13, z: 0}
+--- !u!82 &8279280
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136464}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4b0ee13588f1f364884c251adc1b12e3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.588
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &9518548
 Animator:
   serializedVersion: 3

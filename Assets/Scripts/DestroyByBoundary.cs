@@ -14,7 +14,7 @@ public class DestroyByBoundary : MonoBehaviour
         // if it doesn't have a death object, just destroy it
         if (other.gameObject.GetComponent<Death>())
         {
-            other.gameObject.GetComponent<Death>().Die();
+            other.gameObject.GetComponent<Death>().Die(false);
         }
         else
         {

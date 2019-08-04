@@ -43,7 +43,7 @@ public class EnemyHealth : MonoBehaviour {
             // if the current health is 0 or less, call the death function
             if (death != null)
             {
-                death.Die();
+                death.Die(true);
             }
         }
     }

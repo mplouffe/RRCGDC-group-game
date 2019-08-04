@@ -10,7 +10,7 @@ public class Death : MonoBehaviour {
     /// Death
     /// function to handle the killing of the enemy
     /// </summary>
-    public virtual void Die()
+    public virtual void Die(bool explode)
     {
         // if the object being killed has been given a spawn lane, return it to the pool
         if (spawnLane != -100)
@@ -18,8 +18,11 @@ public class Death : MonoBehaviour {
             GameObject.FindObjectOfType<EnemySpawner>().spawnLanes.Add(spawnLane);
         }
 
-        // create the explosion     
-        Instantiate(explosion, transform.position, transform.rotation);
+        if (explode)
+        {
+            // create the explosion     
+            Instantiate(explosion, transform.position, transform.rotation);
+        }
 
         // destroy this object
         Destroy(gameObject);
