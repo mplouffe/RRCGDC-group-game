@@ -1,0 +1,72 @@
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     2019 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.199 seconds
+Platform assembly: C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\3rdHunter\Documents\Game Dev\Blood Alley_Data\Managed\System.Xml.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI.Hid> Failed to create device file:
+ 2 The system cannot find the file specified.
+
+ 
+(Filename:  Line: 54)
+
+<RI> Input initialized.
+<RI> Initialized touch support.
+The referenced script on this Behaviour (Game Object 'Canvas') is missing!
+ 
+(Filename:  Line: 1655)
+
+UnloadTime: 0.685693 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.377067 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 706.
+Total: 0.295278 ms (FindLiveObjects: 0.022895 ms CreateObjectMapping: 0.044212 ms MarkObjects: 0.217905 ms  DeleteObjects: 0.010263 ms)
+
+The referenced script on this Behaviour (Game Object 'Canvas') is missing!
+ 
+(Filename:  Line: 1655)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.291645 ms
+
+Unloading 307 unused Assets to reduce memory usage. Loaded Objects now: 335.
+Total: 0.649770 ms (FindLiveObjects: 0.200536 ms CreateObjectMapping: 0.031580 ms MarkObjects: 0.166192 ms  DeleteObjects: 0.250670 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.367913 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 709.
+Total: 0.313831 ms (FindLiveObjects: 0.028817 ms CreateObjectMapping: 0.024080 ms MarkObjects: 0.250276 ms  DeleteObjects: 0.010263 ms)
+
+The referenced script on this Behaviour (Game Object 'Canvas') is missing!
+ 
+(Filename:  Line: 1655)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.421995 ms
+
+Unloading 307 unused Assets to reduce memory usage. Loaded Objects now: 338.
+Total: 0.467392 ms (FindLiveObjects: 0.017764 ms CreateObjectMapping: 0.033159 ms MarkObjects: 0.164218 ms  DeleteObjects: 0.251460 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 15b8 -> priority: 1 
+  Thread -> id: 2818 -> priority: 1 
